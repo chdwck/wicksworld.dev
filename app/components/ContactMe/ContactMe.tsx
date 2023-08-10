@@ -10,7 +10,7 @@ export function ContactMe() {
         <FaGithub className="inline" />
       </ContactMeLink>
 
-      <ContactMeLink uname="@plttwck" link={links.gh}>
+      <ContactMeLink uname="@plttwck" link={links.x}>
         <FaTwitter className="inline" />
       </ContactMeLink>
 
