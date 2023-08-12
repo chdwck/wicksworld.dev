@@ -25,7 +25,7 @@ After that, I discovered [@theprimeagen](https://www.youtube.com/@ThePrimeTimeag
 I also discovered [John Carmack's inlined code emails](http://number-none.com/blow/john_carmack_on_inlined_code.html) and [Jonathan Blow](https://twitter.com/jonathan_blow).
 
 I can sum up 95% of what I have learned of how they like to write code in Nike's iconic tagline. Instead I'll sum it up with what I have been telling myself 
-every time I sense myself getting stuck in minutia. *Write the damn code*.
+every time I start getting stuck in minutia. *Write the damn code*.
 
 Kill the Evil started with OOP. I followed some tutorials from the wonderful [SimonDev](https://www.youtube.com/@simondev758) and used the patterns he did. I liked them at first. He used Finite State Machines and
 proxy classes. Things made sense until I started on the combat system. Experimentation slowed. Old thought patterns began to swirl in my 
