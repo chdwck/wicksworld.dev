@@ -20,6 +20,8 @@ to create a 30 min to hour long adventure where you, the hero, find and destroy 
 - Arrows keys to control tactical camera
 - `x` - to toggle attack state
 - `Space` - to confirm action (move or attack)
+- `p` - finish your turn
+- `q` - leave battle state
 
 ### Mobile Controls
 None yet I'm sorry 😢
