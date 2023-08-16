@@ -18,7 +18,7 @@ export function ContactMe() {
         <HiOutlineMail className="inline" />
       </ContactMeLink>
 
-      <ContactMeLink uname="@plttwck" link={links.linkedIn}>
+      <ContactMeLink uname="chadwickplattkuhn" link={links.linkedIn}>
         <FaLinkedin className="inline" />
       </ContactMeLink>
     </div>
