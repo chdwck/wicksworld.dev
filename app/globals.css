@@ -27,9 +27,8 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.magic-border {
-  border-image: linear-gradient(to bottom right, #40c9ff, #e81cff) 30;
+.blogBorder {
+  border-image: linear-gradient(to bottom left, #3bcfd4, #fc9305, #f20094) 30;
   border-width: 4px;
   border-style: solid;
 }
-
