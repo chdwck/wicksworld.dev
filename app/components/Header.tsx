@@ -5,12 +5,30 @@ import { useState } from "react";
 const games = "games";
 const tools = "tools";
 const closed = "closed";
-const open = "open";
-type MenuState = typeof games | typeof tools | typeof closed | typeof open;
+type MenuState = typeof games | typeof tools | typeof closed;
+
+type ListItem = { text: string; href: string };
+type SliderProps = { gradient: string; isOpen: boolean; lis: ListItem[] };
+const Slider = (props: SliderProps) => (
+  <div
+    className={`overflow-hidden absolute sm:w-full sm:top-[3.75rem] top-[3.25rem] right-0 transition-[max-width] ${
+      props.gradient
+    } ${props.isOpen ? "max-w-[100vw]" : "max-w-[0vw]"}`}
+  >
+    <ul className="list-disc p-4 ml-4 whitespace-nowrap">
+      {props.lis.map((item) => (
+        <li key={item.href}>
+          <Link href={item.href} className="hover:underline">
+            {item.text}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
 
 export function Header() {
   const [menuState, setMenuState] = useState<MenuState>(closed);
-  const isMenuOpen = menuState !== closed;
   const isGamesMenuOpen = menuState === games;
   const isToolsMenuOpen = menuState === tools;
 
@@ -22,16 +40,23 @@ export function Header() {
 
     setMenuState(toggleState);
   }
+
+  const gameItems: ListItem[] = [
+    { text: "Kill the Evil (WIP)", href: "/games/kill-the-evil" },
+  ];
+
+  const toolItems: ListItem[] = [
+    { text: "Kill the Evil Map Builder", href: "/tools/kte-map-builder" },
+  ];
+
   return (
-    <header
-      className={`p-4 relative transition-all ${
-        isMenuOpen ? "mb-[4.25rem]" : "mb-[0rem]"
-      }`}
-    >
-      <Link className="relative z-10" href="/" title="Back to home">
-        <h1 className="hover:underline text-3xl relative inline-block">blog by @chdwck</h1>
+    <header className="relative transition-all flex justify-between">
+      <Link className="p-4" href="/" title="Back to home">
+        <h1 className="hover:underline text-3xl relative inline-block">
+          blog by @chdwck
+        </h1>
       </Link>
-      <nav className="absolute top-0 inset-x-0 w-screen flex flex-col items-end">
+      <nav className="relative z-10">
         <ul className="flex items-center sm:pointer-events-auto">
           <li>
             <button
@@ -50,32 +75,16 @@ export function Header() {
             </button>
           </li>
         </ul>
-        <div
-          className={`overflow-hidden w-screen bg-gradient-to-tr from-[#40c9ff] to-[#e81cff] transition-[max-height] ${
-            isGamesMenuOpen ? "max-h-[4.25rem] " : "max-h-[0]"
-          }`}
-        >
-          <ul className="list-disc p-4 ml-4">
-            <li>
-              <Link href="/games/kill-the-evil" className="hover:underline">
-                Kill the Evil (WIP)
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div
-          className={`overflow-hidden w-screen bg-gradient-to-tr from-[#f74c06] to-[#f9bc2c] transition-[max-height] ${
-            isToolsMenuOpen ? "max-h-[4.25rem] " : "max-h-[0]"
-          }`}
-        >
-          <ul className="list-disc p-4 ml-4">
-            <li>
-              <Link href="/tools/kte-map-builder" className="hover:underline">
-                Kill the Evil Map Builder
-              </Link>
-            </li>
-          </ul>
-        </div>
+        <Slider
+          lis={gameItems}
+          isOpen={isGamesMenuOpen}
+          gradient="bg-gradient-to-b to-[#40c9ff] from-[#e81cff]"
+        />
+        <Slider
+          lis={toolItems}
+          isOpen={isToolsMenuOpen}
+          gradient="bg-gradient-to-b to-[#f74c06] from-[#f9bc2c]"
+        />
       </nav>
     </header>
   );
