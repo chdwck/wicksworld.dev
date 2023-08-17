@@ -2,6 +2,7 @@
 title: Heresy - a case against prescribed patterns
 createdAt: 2023-08-11T15:25:10.941Z
 series: Kill the Evil Devlogs
+description: "I refactored Kill the Evil from OOP into a nameless proceduralish pattern and it was a huge win!"
 ---
 I found clean code early on in my career. I read [Game Programming Patterns](https://gameprogrammingpatterns.com/), 
 discovered [The Clean Code Blog](https://blog.cleancoder.com/), learned Java and C#. 
@@ -75,7 +76,7 @@ test('for loop classes', () => {
 
 ```
 <figure>
- <img width="438" height="61" alt="Class vs Poco Test Results" src="class_vs_poco.webp" />
+ <img width="438" height="61" alt="Class vs Poco Test Results" src="/class_vs_poco.webp" />
  <figcaption>Class vs Poco Test Results</figcaption>
 </figure>
 

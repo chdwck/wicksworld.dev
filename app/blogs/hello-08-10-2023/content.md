@@ -1,6 +1,8 @@
 ---
 title: Hello
 createdAt: 2023-08-10T14:45:09.635Z
+series: General
+description: Oh hey. My Name is Chadwick. Thanks for visiting my blog!
 ---
 My name is Chadwick Platt-Kuhn. I am a full-stack developer. Thanks for visiting my blog.
 

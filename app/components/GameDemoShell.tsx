@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
@@ -17,19 +17,38 @@ export function GameDemoShell(props: GameDemoShellProps) {
     setIsGameLoaded(true);
   }
 
+  function quitGame() {
+    setIsPlaying(false);
+    setIsGameLoaded(false);
+  }
+
+  useEffect(() => {
+    if (isGameLoaded) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  });
+
   return (
     <div className="w-full relative aspect-video">
       {isPlaying && (
-        <iframe
-          onLoad={handleIframeLoaded}
-          className="aspect-video absolute inset-0"
-          width="100%"
-          src={props.src}
-          title={props.title}
-        />
+        <div className="fixed inset-0 bg-black">
+          <button onClick={quitGame} className="fixed z-10 text-white top-0 right-0 p-4">
+            Quit Game
+          </button>
+          <iframe
+            onLoad={handleIframeLoaded}
+            className="aspect-video w-full"
+            width="100%"
+            src={props.src}
+            title={props.title}
+          />
+        </div>
       )}
       {!isGameLoaded && (
         <Image
+          className="p-4"
           width="2080"
           height="1088"
           loading="eager"

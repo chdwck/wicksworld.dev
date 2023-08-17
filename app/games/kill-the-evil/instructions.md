@@ -2,7 +2,7 @@
 I love tactical RPGS. My all time favorite is Divinity Original Sin 2. My goal with this is
 to create a 30 min to hour long adventure where you, the hero, find and destroy a lurking evil!
 
-[Github](https://github.com/chdwck/kill-the-evil) | [Fullscreen](https://peppy-kheer-f29da5.netlify.app/)
+[Github](https://github.com/chdwck/kill-the-evil)
 
 ## Controls
 
