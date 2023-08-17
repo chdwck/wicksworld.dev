@@ -32,21 +32,21 @@ export function Header() {
         <h1 className="hover:underline text-3xl relative inline-block">blog by @chdwck</h1>
       </Link>
       <nav className="absolute top-0 inset-x-0 w-screen flex flex-col items-end">
-        <ul className="flex items-center transition-opacity opacity-0 pointer-events-none sm:opacity-100 sm:pointer-events-auto">
+        <ul className="flex items-center sm:pointer-events-auto">
           <li>
             <button
               onClick={() => toggleMenu(games)}
-              className="text-xl font-semibold p-4 bg-gradient-to-b from-[#40c9ff] to-[#e81cff]"
+              className="text-xl font-semibold p-3 sm:p-4 bg-gradient-to-b from-[#40c9ff] to-[#e81cff]"
             >
-              🎮 Games
+              🎮 <span className="hidden sm:inline-block">Games</span>
             </button>
           </li>
           <li>
             <button
               onClick={() => toggleMenu(tools)}
-              className="text-xl font-semibold p-4 bg-gradient-to-b from-[#f74c06] to-[#f9bc2c]"
+              className="text-xl font-semibold p-3 sm:p-4 bg-gradient-to-b from-[#f74c06] to-[#f9bc2c]"
             >
-              🛠️ Tools
+              🛠️ <span className="hidden sm:inline-block">Tools</span>
             </button>
           </li>
         </ul>

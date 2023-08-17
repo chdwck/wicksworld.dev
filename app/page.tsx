@@ -8,12 +8,11 @@ export default function Home() {
     <>
       <Header />
       <main className="p-4 max-w-prose mx-auto">
-        <br />
         <Simplicity />
         <br />
         <Hello />
       </main>
-      <footer className="max-w-prose mx-auto">
+      <footer>
         <ContactMe />
       </footer>
     </>
