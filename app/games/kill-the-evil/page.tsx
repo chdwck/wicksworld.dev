@@ -1,10 +1,10 @@
-import { ContactMe } from "@/app/components/ContactMe/ContactMe";
 import RootLayout from "@/app/layout";
 import { react as Content } from "@/app/content/killtheevilinstructions.md";
 import Link from "next/link";
 import { HiOutlineChevronLeft } from "react-icons/hi";
 import { GameDemoShell } from "@/app/components/GameDemoShell";
 import { Header } from "@/app/components/Header";
+import { Footer } from "@/app/components/Footer";
 
 export default function KillTheEvil() {
   return (
@@ -20,9 +20,7 @@ export default function KillTheEvil() {
           <Content />
         </div>
       </main>
-      <footer>
-        <ContactMe />
-      </footer>
+      <Footer />
     </RootLayout>
   );
 }

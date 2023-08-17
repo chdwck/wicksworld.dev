@@ -12,9 +12,7 @@ export default function Home() {
         <br />
         <Hello />
       </main>
-      <footer>
-        <ContactMe />
-      </footer>
+      <Footer />
     </>
   );
 }
