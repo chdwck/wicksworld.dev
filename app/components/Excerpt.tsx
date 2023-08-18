@@ -12,8 +12,8 @@ export default function Excerpt(props: ExcerptProps) {
   const dateFmt = new Date(props.createdAt).toLocaleDateString("en-us");
   return (
     <article className="my-4">
-      <div>
-        <div className="flex justify-between items-start mb-1">
+      <div className="mb-1">
+        <div className="flex justify-between items-start mb-0.5">
           <h2 className="text-xl font-semibold">{props.title}</h2>
           <time>{dateFmt}</time>
         </div>
