@@ -63,7 +63,7 @@ the map builder iframe, it failed to copy due to document permissions!
 One of my goals with this blog is to figure out how to do microfrontends well, so I'll definitely be looking into how to manage this more gracefully in the future. But for now,
 I switched the copy to clipboard functionality with a textarea to copy the formatted array from.
 
-```js
+```
 <Switch>
   <Match when={isShowingCode()}>
     <textarea
