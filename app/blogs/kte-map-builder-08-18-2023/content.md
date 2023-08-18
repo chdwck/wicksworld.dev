@@ -57,20 +57,17 @@ And that's pretty much it. Check it out [here](/tools/kte-map-builder)
 [Source](https://github.com/chdwck/kte-map-builder)
 
 **Day 1 Patch**
+
 Copy to Clipboard didn't work in production. I've be taking a microfrontend with iframes strategy to my blog. So when I tried to copy to clipboard from
 the map builder iframe, it failed to copy due to document permissions!
 
 One of my goals with this blog is to figure out how to do microfrontends well, so I'll definitely be looking into how to manage this more gracefully in the future. But for now,
 I switched the copy to clipboard functionality with a textarea to copy the formatted array from.
 
-```
+```js
 <Switch>
   <Match when={isShowingCode()}>
     <textarea
-      style={{
-        height: `${mapHeight() * 20}px`,
-        width: `${mapWidth() * 40}px`,
-      }}
       class={styles.copyCodeArea}
       onKeyDown={onlyAllowCopy}
       onClick={selectText}
@@ -79,38 +76,7 @@ I switched the copy to clipboard functionality with a textarea to copy the forma
     </textarea>
   </Match>
   <Match when={!isShowingCode()}>
-    <table
-      onClick={updateCellStyle}
-      onMouseDown={handleDragStart}
-      onMouseOver={handleDragProgress}
-      onMouseUp={handleDragEnd}
-    >
-      <For each={matrix()} fallback={<p>Loading</p>}>
-        {(row, y) => (
-          <tr class={styles.row}>
-            <For each={row}>
-              {(_, x) => (
-                <td
-                  data-x={x()}
-                  data-y={y()}
-                  style={{
-                    width: `${cellSize()}px`,
-                    height: `${cellSize()}px`,
-                    background: cellStyles[getCellId(x(), y())].color,
-                  }}
-                  classList={{
-                    [styles.cell]: true,
-                    [styles.inDragArea]: isInDragArea([x(), y()]),
-                  }}
-                >
-                  <span>{getCellId(x(), y())}</span>
-                </td>
-              )}
-            </For>
-          </tr>
-        )}
-      </For>
-    </table>
+    // Table code
   </Match>
 </Switch>
 
