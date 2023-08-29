@@ -16,7 +16,7 @@ export default function Shell(props: ShellProps) {
         <BackToMainPage />
         <div className="mt-2">
           <div className="flex justify-between items-center">
-            <h2 className="text-xl font-semibold">{props.title}</h2>
+            <h1 className="text-xl font-semibold">{props.title}</h1>
             <time>{dateFmt}</time>
           </div>
           {props.series && (
