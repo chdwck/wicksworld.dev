@@ -3,6 +3,7 @@ import { Header } from "@/app/components/Header";
 import { HelloExcerpt } from "./blogs/hello-08-10-2023/excerpt";
 import { HeresyExcerpt } from "./blogs/heresy-08-11-2023/excerpt";
 import { KteMapBuilderBlogExcerpt } from "./blogs/kte-map-builder-08-18-2023/excerpt";
+import { CollisionDetectionExcerpt } from "./blogs/collision-detection-08-28-2023/excerpt";
 
 type ListItem = { text: string; href: string };
 
@@ -58,6 +59,8 @@ export default function Home() {
         <br />
         <section>
           <h2 className="text-2xl font-bold">✍️ Blogs</h2>
+          <CollisionDetectionExcerpt />
+          <br />
           <KteMapBuilderBlogExcerpt />
           <br />
           <HeresyExcerpt />
