@@ -4,7 +4,7 @@ createdAt: 2023-09-12T18:12:03.568Z
 series: Kill the Evil Devlogs
 description: A summary of how I handled state management with my WebGL powered map builder.
 ---
-WebGl is so cool. It's daunting, but worth the learning curve.
+WebGL is so cool. It's daunting, but worth the learning curve.
 I avoided it for years because I thought it would only be useful
 for 3D creative programming. I now see 2D WebGL as the secret to unlocking
 native performance in web apps for complex UIs.
