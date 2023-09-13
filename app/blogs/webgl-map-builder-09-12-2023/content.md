@@ -2,7 +2,7 @@
 title: WebGL for web apps - rebuilding kte-map-builder 
 createdAt: 2023-09-12T18:12:03.568Z
 series: Kill the Evil Devlogs
-description: A summary of how I handled state management with my WebGL powered map builder.
+description: A summary of how I handled state management for my WebGL powered map builder.
 ---
 WebGL is so cool. It's daunting, but worth the learning curve.
 I avoided it for years because I thought it would only be useful
@@ -11,8 +11,8 @@ native performance in web apps for complex UIs.
 
 If you are new to WebGL and want to understand how it works, I strongly recommend [WebGL Fundamentals](https://webglfundamentals.org/webgl/lessons/webgl-fundamentals.html).
 
-This post is a short and sweet summary of how I setup [kte-map-builder]() to use
-WebGL with [Solid.js](). This post and the relevant Git repo could be used as "real world" 
+This post is a short and sweet summary of how I setup [kte-map-builder](https://github.com/chdwck/kte-map-builder) to use
+WebGL with [Solid.js](https://www.solidjs.com/guides/getting-started). This post and the relevant Git repo could be used as "real world" 
 example of how to use WebGL with a modern FE framework.
 
 Lets go.
