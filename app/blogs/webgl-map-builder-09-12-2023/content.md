@@ -77,4 +77,4 @@ const App = () => {
 And thats it! I almost didn't write a blog post about this, but I am super
 stoked about the performance gains on my map builder and I wanted to share something about it.
 
-Thanks!
+Thanks for reading!
